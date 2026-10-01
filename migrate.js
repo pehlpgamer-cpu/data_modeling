@@ -1,7 +1,14 @@
 
 import { Sequelize } from "sequelize";
 import { sequelize } from "./models/db.js";
-import { User } from "./models/userModel.js";
+import "./models/userModel.js";
+
+import "./models/auditTrail.js"
+import "./models/category.js"
+import "./models/inventoryItem.js"
+import "./models/product.js"
+import "./models/role.js"
+
 import inquirer from "inquirer";
 import { mysqlConfig } from "./config.js";
 

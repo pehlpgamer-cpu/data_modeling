@@ -39,4 +39,27 @@ router.get("/forgot-password", forgotPasswordPage);
 router.get("/dashboard", dashboardPage);
 router.get("/logout", logoutUser);
 
+
+
+import auditTrailController from "../controllers/auditTrailController.js";
+import categoryController from "../controllers/categoryController.js";
+import inventoryItemController from "../controllers/inventoryItemController.js";
+import productController from "../controllers/productController.js";
+import roleController from "../controllers/roleController.js";
+
+router.get("/audit_trails", auditTrailController.index)
+router.get("/audit_trails", auditTrailController.store)
+
+router.get("/categories", categoryController.index);
+router.post("/categories", categoryController.store);
+
+router.get("/inventory_items", inventoryItemController.index);
+router.post("/inventory_items", inventoryItemController.store);
+
+router.get("/products", productController.index);
+router.post("/products", productController.store);
+
+router.get("/roles", roleController.index);
+router.post("/roles", roleController.store);
+
 export default router;
