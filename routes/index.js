@@ -56,6 +56,7 @@ router.post("/categories", categoryController.store);
 router.get("/inventory_items", inventoryItemController.index);
 router.post("/inventory_items", inventoryItemController.store);
 
+router.get("/products/:id", productController.show);
 router.get("/products", productController.index);
 router.post("/products", productController.store);
 

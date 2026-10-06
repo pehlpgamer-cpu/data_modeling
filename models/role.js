@@ -12,4 +12,4 @@ export const Role = sequelize.define("Role", {
 {
     paranoid: true
 });
-export { sequelize }; 
+export { sequelize };
