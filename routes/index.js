@@ -47,6 +47,7 @@ import inventoryItemController from "../controllers/inventoryItemController.js";
 import productController from "../controllers/productController.js";
 import roleController from "../controllers/roleController.js";
 
+
 router.get("/audit_trails", auditTrailController.index)
 router.get("/audit_trails", auditTrailController.store)
 
@@ -62,5 +63,15 @@ router.post("/products", productController.store);
 
 router.get("/roles", roleController.index);
 router.post("/roles", roleController.store);
+
+// ONLINE ACTIVITY 2 - 2026-10-09
+import bookController from "../controllers/bookController.js";
+router
+  .get("/books/:id", bookController.show)
+  .get("/books", bookController.index)
+  .post("/books", bookController.store)
+  .put("/books/:id", bookController.update)
+  .patch("/books/:id", bookController.update)
+  .delete("/books/:id", bookController.destroy)
 
 export default router;

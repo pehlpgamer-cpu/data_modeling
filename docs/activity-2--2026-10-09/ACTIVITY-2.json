@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "model_query",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "books",
+      "item": [
+        {
+          "name": "by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "description": "",
+            "url": {
+              "raw": "{{uri}}/67e1013b-5fc5-4008-9a97-cbed2d03d19c",
+              "protocol": "",
+              "host": [
+                "{{uri}}"
+              ],
+              "path": [
+                "67e1013b-5fc5-4008-9a97-cbed2d03d19c"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "description": "",
+            "url": {
+              "raw": "{{uri}}/67e1013b-5fc5-4008-9a97-cbed2d03d19c",
+              "protocol": "",
+              "host": [
+                "{{uri}}"
+              ],
+              "path": [
+                "67e1013b-5fc5-4008-9a97-cbed2d03d19c"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "description": "",
+            "url": {
+              "raw": "{{uri}}",
+              "protocol": "",
+              "host": [
+                "{{uri}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "insert",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "description": "",
+            "url": {
+              "raw": "{{uri}}",
+              "protocol": "",
+              "host": [
+                "{{uri}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"The one thing\",\n  \"author\":\"James Clear\",\n  \"genre\": \"self-development\",\n  \"pages\": 1234, \n  \"publishedAt\": \"9999-12-31 23:59:59\",\n  \"deletedAt\": null\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "description": "",
+            "url": {
+              "raw": "{{uri}}/8cf0b5ce-760f-4772-a1d2-34ccec2e2168",
+              "protocol": "",
+              "host": [
+                "{{uri}}"
+              ],
+              "path": [
+                "8cf0b5ce-760f-4772-a1d2-34ccec2e2168"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"the super book\",\n  \"author\": \"Joe Bidening\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:3000",
+      "type": "default"
+    },
+    {
+      "key": "uri",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>model_query - API Documentation</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        #opencollection-container { width: 100vw; height: 100vh; }
+    </style>
+    <link rel="stylesheet" href="https://cdn.usebruno.com/api-docs/api-docs.css">
+    <script src="https://cdn.usebruno.com/api-docs/api-docs.js"></script>
+</head>
+<body>
+    <div id="opencollection-container"></div>
+    <script>
+        const collectionData = "opencollection: 1.0.0\ninfo:\n  name: model_query\nconfig:\n  proxy:\n    inherit: true\n    config:\n      protocol: http\n      hostname: ''\n      port: ''\n      auth:\n        username: ''\n        password: ''\n      bypassProxy: ''\nitems:\n  - info:\n      name: books\n      type: folder\n      seq: 1\n    request:\n      auth: inherit\n      variables:\n        - name: uri\n          value: '{{base}}/books'\n    items:\n      - info:\n          name: by id\n          type: http\n          seq: 1\n        http:\n          method: GET\n          url: '{{uri}}/67e1013b-5fc5-4008-9a97-cbed2d03d19c'\n          auth: inherit\n        settings:\n          encodeUrl: true\n          timeout: 0\n          followRedirects: true\n          maxRedirects: 5\n          forwardAuthorizationHeader: false\n      - info:\n          name: delete\n          type: http\n          seq: 1\n        http:\n          method: DELETE\n          url: '{{uri}}/67e1013b-5fc5-4008-9a97-cbed2d03d19c'\n          auth: inherit\n        settings:\n          encodeUrl: true\n          timeout: 0\n          followRedirects: true\n          maxRedirects: 5\n          forwardAuthorizationHeader: false\n      - info:\n          name: get all\n          type: http\n          seq: 1\n        http:\n          method: GET\n          url: '{{uri}}'\n          auth: inherit\n        settings:\n          encodeUrl: true\n          timeout: 0\n          followRedirects: true\n          maxRedirects: 5\n          forwardAuthorizationHeader: false\n      - info:\n          name: insert\n          type: http\n          seq: 1\n        http:\n          method: POST\n          url: '{{uri}}'\n          body:\n            type: json\n            data: |\n              {\n                \"title\": \"The one thing\",\n                \"author\":\"James Clear\",\n                \"genre\": \"self-development\",\n                \"pages\": 1234, \n                \"publishedAt\": \"9999-12-31 23:59:59\",\n                \"deletedAt\": null\n              }\n          auth: inherit\n        settings:\n          encodeUrl: true\n          timeout: 0\n          followRedirects: true\n          maxRedirects: 5\n          forwardAuthorizationHeader: false\n      - info:\n          name: update\n          type: http\n          seq: 3\n        http:\n          method: PUT\n          url: '{{uri}}/8cf0b5ce-760f-4772-a1d2-34ccec2e2168'\n          body:\n            type: json\n            data: |-\n              {\n                \"title\": \"the super book\",\n                \"author\": \"Joe Bidening\"\n              }\n          auth: inherit\n        settings:\n          encodeUrl: true\n          timeout: 0\n          followRedirects: true\n          maxRedirects: 5\n          forwardAuthorizationHeader: false\nrequest:\n  variables:\n    - name: base\n      value: http://localhost:3000\nbundled: true\nextensions:\n  bruno:\n    ignore:\n      - node_modules\n      - .git\n    exportedAt: '2026-10-09T11:43:28.608Z'\n    exportedUsing: Bruno/4.2.1\n";
+        new window.OpenCollection({
+            target: document.getElementById('opencollection-container'),
+            opencollection: collectionData,
+            theme: 'light'
+        });
+    </script>
+</body>
+</html>
